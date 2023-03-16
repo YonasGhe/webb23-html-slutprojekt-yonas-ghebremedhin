@@ -1,0 +1,230 @@
+body{
+  position: relative;
+  background-color: #345;
+  color: aliceblue;
+}
+html{
+  scroll-behavior: smooth;
+}
+  #nav {
+    background-color: darkslategrey;
+    padding: 1rem;
+  }
+  #nav a {
+    color: black;
+    font-size: large;
+    text-align: end;
+    margin-right: 2rem;
+  }
+  #nav a:hover{
+    background-color: darkslateblue;
+  }
+  h1{
+    text-align: center;
+    padding: 10px;
+    background-color: #567;
+  }
+  #container{
+    display: grid;
+    grid-template-columns: repeat(4, 2rf);
+    grid-gap: 1rem;
+    align-items: center;
+    margin: auto;
+    --fontsize: 25px;
+    background-color: #788;
+  }
+  #container img{
+    filter: opacity(50%);
+    height: 150px;
+  }
+  #colum{
+    width: 80%;
+    grid-area: auto auto;
+    background-color: #345;
+    padding: 1rem;
+    margin: 2rem;
+    transition-timing-function: ease-our;
+    transform: 0.25s;
+    transform: translateY(0);
+  }
+  #colum:hover{
+    background-color: dimgray;
+  } 
+  #container a{
+    display: block;
+    text-decoration: none;
+  }
+  button{
+    color: var(--blue);
+    transition: transform 750ms;
+    will-change: transform;
+    background-color: darkslateblue;
+  }
+  button:hover{
+    transform: translateY(10px);
+  }
+  h2{
+    text-align: center;
+    color:darkorchid;
+    margin: 2rem;
+    padding: 1rem;
+  }
+  ol li{
+    list-style: none;
+    color: aliceblue;
+    margin-bottom: 1rem;
+  }
+  h3{
+    color: aqua;
+    margin: 1rem;
+    padding: 1rem;
+  }
+  h4{
+    color: darkseagreen;
+    margin: 2rem;
+  }
+  section{
+    width: 80%;
+    margin: 2rem;
+    padding: 2rem;
+  }
+  .body {
+    text-align: center;
+    margin: 3rem;
+    padding: 2rem;
+  }
+  .body img{
+    float: left;
+    width: 50%;
+    margin: auto;
+    filter: brightness(100%) ;
+  }
+  .info li{
+    margin: 1rem;
+  }
+  .main{
+    background-color: #345;
+  }
+  .intro{
+    width: 80%;
+    text-align: center;
+  }
+   .intro h5{
+    text-align: center;
+    padding: 3rem;
+    color: aqua;
+  }
+   p{
+    text-align: center;
+    margin: 2rem;
+    padding: auto;
+    color: whitesmoke;
+  }
+
+  p {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    /*Det ska vara 1em mellan rum på all <p> taggar när det behövs.*/
+  }
+  .footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+  }
+  .social-media{
+    text-align: start;
+    margin: 1rem;
+  }
+  .addres{
+    text-align: start;
+    margin: 1rem;
+  }
+  footer{
+      background-color: darkslategrey;
+      color: aliceblue;
+      height: auto;
+      padding: 1rem;
+    }
+    footer img{
+      margin: 1rem;
+      height: 30px;
+      padding: 0%;
+  }
+  span p{
+    text-align: right;
+    margin-top: 2rem;
+  }
+  :root{
+    --primary-color: darkslategrey;
+  }
+  .footer{
+    background-color: var(--primary-color);
+    color: #f5f5f5;
+    padding: var(--base-spacing);
+  }
+  @media (min-width: 520px){
+    body{
+      object-fit: cover;
+    }
+  }
+  @media (prefers-color-scheme: dark){
+    body{
+      background-color: darkslategray;
+      color: #789;
+    }
+  }
+  @media (max-width: 700px) {
+    body{
+      text-align: center;
+    }
+    #container{
+      display: block;
+    }
+    .footer{
+      text-align: center;
+    }
+    .body img{
+      width: 80%;
+    }
+    li{
+      list-style: none;
+    }
+  }
+  @keyframes mymove {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  .social-media{
+    animation-name: mymove;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+  }
+  h2{
+    animation-name: mymove;
+    animation-duration: 3s;
+    animation-iteration-count: inherit;
+  }
+  #colum{
+    animation-name: mymove;
+    animation-duration: 500ms;
+    animation-iteration-count: initial;
+  }
+  @keyframes move{
+    from{
+       width: 80%; 
+    }
+    to{
+        width: 50%;
+    }
+  }
+  h1{
+    animation-name: move;
+    animation-duration: 0.5s;
+    animation-iteration-count: initial;
+  }
