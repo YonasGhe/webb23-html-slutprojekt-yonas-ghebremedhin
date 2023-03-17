@@ -1,14 +1,14 @@
 body{
-  position: relative;
   background-color: #345;
   color: aliceblue;
+  font-size: medium;
 }
 html{
   scroll-behavior: smooth;
 }
   #nav {
+    margin-bottom: auto;
     background-color: darkslategrey;
-    padding: 1rem;
   }
   #nav a {
     color: black;
@@ -21,34 +21,30 @@ html{
   }
   h1{
     text-align: center;
-    padding: 10px;
-    background-color: #567;
+    margin: 1rem;
+    padding: 2rem;
+    color: white;
   }
   #container{
-    display: grid;
-    grid-template-columns: repeat(4, 2rf);
-    grid-gap: 1rem;
-    align-items: center;
-    margin: auto;
-    --fontsize: 25px;
-    background-color: #788;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  --fontsize: 25px;
+  margin: auto;
   }
   #container img{
     filter: opacity(50%);
     height: 150px;
   }
   #colum{
-    width: 80%;
-    grid-area: auto auto;
     background-color: #345;
     padding: 1rem;
     margin: 2rem;
-    transition-timing-function: ease-our;
-    transform: 0.25s;
-    transform: translateY(0);
+
   }
   #colum:hover{
-    background-color: dimgray;
+    background-color: #123;
   } 
   #container a{
     display: block;
@@ -58,7 +54,7 @@ html{
     color: var(--blue);
     transition: transform 750ms;
     will-change: transform;
-    background-color: darkslateblue;
+    background-color: wheat;
   }
   button:hover{
     transform: translateY(10px);
@@ -70,6 +66,7 @@ html{
     padding: 1rem;
   }
   ol li{
+    font-size: 20px;
     list-style: none;
     color: aliceblue;
     margin-bottom: 1rem;
@@ -101,30 +98,87 @@ html{
   }
   .info li{
     margin: 1rem;
+    font-size: large;
   }
   .main{
     background-color: #345;
   }
   .intro{
-    width: 80%;
+    width: 85%;
+    margin: 2rem;
     text-align: center;
   }
-   .intro h5{
+   .intro h4{
     text-align: center;
+    font-size: 25px;
     padding: 3rem;
     color: aqua;
   }
-   p{
+  .intro p{
+    font-size: 20px;
+  }
+  p{
+    font-size: 17px;
     text-align: center;
     margin: 2rem;
     padding: auto;
     color: whitesmoke;
   }
+  #wrap{
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+    width: 50%;
 
+  }
+  #grid {
+    width: 100%;
+    grid-area: auto;
+    justify-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: #123;
+    margin: 2rem;
+    border-radius: 8%;
+    border: 2px solid darkorchid;
+  }
+  .gallery img{
+    height: 250px;
+    width: 75%;
+    float: left;
+    margin: auto;
+    filter: brightness(100%) ;
+  }
+  .gallery h3 {
+    font-size: 24px;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .gallery p {
+    font-size: 16px;
+    margin: 0;
+    text-align: justify;
+  }
   p {
     margin-bottom: 1em;
     padding-bottom: 1em;
     /*Det ska vara 1em mellan rum på all <p> taggar när det behövs.*/
+  }
+  #repo{
+    width: 40%;
+    display: inline-block;
+    margin: 10px;
+    background-color: sandybrown;
+    border-radius: 10%;
+  }
+  #repo p{
+    float: left;
+  }
+  #repo img{
+    height: 40px;
+    width: 30%;
+    margin-bottom: 1rem;
+    float: right;
   }
   .footer{
     display: flex;
@@ -170,8 +224,9 @@ html{
   }
   @media (prefers-color-scheme: dark){
     body{
-      background-color: darkslategray;
-      color: #789;
+      background-color: whitesmoke;
+      color:#345;
+      color: #123;
     }
   }
   @media (max-width: 700px) {
