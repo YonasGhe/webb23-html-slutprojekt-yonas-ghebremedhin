@@ -7,6 +7,7 @@ html{
   scroll-behavior: smooth;
 }
   #nav {
+    padding: 10px;
     margin-bottom: auto;
     background-color: darkslategrey;
   }
@@ -21,9 +22,9 @@ html{
   }
   h1{
     text-align: center;
-    margin: 1rem;
     padding: 2rem;
-    color: white;
+    background-color: #678;
+    color: darkblue;
   }
   #container{
   display: flex;
@@ -41,6 +42,7 @@ html{
     background-color: #345;
     padding: 1rem;
     margin: 2rem;
+    border-radius: 40%;
 
   }
   #colum:hover{
@@ -94,14 +96,14 @@ html{
     float: left;
     width: 50%;
     margin: auto;
-    filter: brightness(100%) ;
+    filter: brightness(75%) ;
   }
   .info li{
     margin: 1rem;
     font-size: large;
   }
   .main{
-    background-color: #345;
+    background-color: var(--secondary-color);
   }
   .intro{
     width: 85%;
@@ -128,7 +130,7 @@ html{
     display: grid;
     grid-template-rows: auto;
     grid-gap: 2rem;
-    width: 50%;
+    width: 55%;
 
   }
   #grid {
@@ -136,7 +138,7 @@ html{
     grid-area: auto;
     justify-items: center;
     text-align: center;
-    padding: 1rem;
+    padding: var(--root-padding);
     background-color: #123;
     margin: 2rem;
     border-radius: 8%;
@@ -144,10 +146,10 @@ html{
   }
   .gallery img{
     height: 250px;
-    width: 75%;
+    width: 78%;
     float: left;
     margin: auto;
-    filter: brightness(100%) ;
+    filter:brightness(75%)
   }
   .gallery h3 {
     font-size: 24px;
@@ -165,7 +167,7 @@ html{
     /*Det ska vara 1em mellan rum på all <p> taggar när det behövs.*/
   }
   #repo{
-    width: 40%;
+    width: 30%;
     display: inline-block;
     margin: 10px;
     background-color: sandybrown;
@@ -188,20 +190,14 @@ html{
   }
   .social-media{
     text-align: start;
-    margin: 1rem;
+    margin: var(--root-margin);
   }
   .addres{
     text-align: start;
-    margin: 1rem;
+    margin: var(--root-margin);
   }
-  footer{
-      background-color: darkslategrey;
-      color: aliceblue;
-      height: auto;
-      padding: 1rem;
-    }
     footer img{
-      margin: 1rem;
+      margin: var(--root-margin);
       height: 30px;
       padding: 0%;
   }
@@ -211,6 +207,9 @@ html{
   }
   :root{
     --primary-color: darkslategrey;
+    --secondary-color: #345;
+    --root-padding: 1rem;
+    --root-margin: 1rem;
   }
   .footer{
     background-color: var(--primary-color);
@@ -218,29 +217,44 @@ html{
     padding: var(--base-spacing);
   }
   @media (min-width: 520px){
-    body{
+    body {
       object-fit: cover;
     }
   }
   @media (prefers-color-scheme: dark){
     body{
-      background-color: whitesmoke;
-      color:#345;
+      background-color: #567;
+      color: #345;
+     }
+     .main{
+      background-color: #789;
+      color: #123;
+     }
+    .footer{
+      background-color: #789;
+      color: #123;
+    }
+    #container{
+      background-color: #789;
       color: #123;
     }
   }
-  @media (max-width: 700px) {
+  @media (max-width: 600px) {
     body{
       text-align: center;
     }
-    #container{
-      display: block;
-    }
     .footer{
+      display: block;
       text-align: center;
     }
+    #colum{
+      width: 90%;
+    }
+    #grid{
+      margin-left: 0%;
+    }
     .body img{
-      width: 80%;
+      width: 100%;
     }
     li{
       list-style: none;
@@ -248,38 +262,30 @@ html{
   }
   @keyframes mymove {
     from {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
     }
     to {
-      transform: translateX(0%);
+      transform: translateX(100%);
     }
   }
   .social-media{
     animation-name: mymove;
     animation-duration: 5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: inherit;
+    animation-timing-function: ease-in-out;
 
   }
-  h2{
-    animation-name: mymove;
-    animation-duration: 3s;
-    animation-iteration-count: inherit;
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
   }
-  #colum{
-    animation-name: mymove;
-    animation-duration: 500ms;
-    animation-iteration-count: initial;
+  
+  /* Apply the animation to the h2 tags */
+  h2 {
+    animation-name: pulse;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
   }
-  @keyframes move{
-    from{
-       width: 80%; 
-    }
-    to{
-        width: 50%;
-    }
-  }
-  h1{
-    animation-name: move;
-    animation-duration: 0.5s;
-    animation-iteration-count: initial;
-  }
+ 
