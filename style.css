@@ -129,9 +129,8 @@ html{
   #wrap{
     display: grid;
     grid-template-rows: auto;
-    grid-gap: 2rem;
-    width: 55%;
-
+    column-gap: 2rem;
+    width: 60%;
   }
   #grid {
     width: 100%;
@@ -142,7 +141,8 @@ html{
     background-color: #123;
     margin: 2rem;
     border-radius: 8%;
-    border: 2px solid darkorchid;
+    border: 1px solid darkorchid;
+
   }
   .gallery img{
     height: 250px;

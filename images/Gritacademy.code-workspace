@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../Desktop/Gritacademy"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Gritacademy",
+		"liveServer.settings.port": 5501
+	}
+}
