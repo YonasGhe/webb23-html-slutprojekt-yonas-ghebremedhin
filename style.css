@@ -28,14 +28,14 @@ html{
   }
   #container{
   float: left;
-  width: 65%;
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   text-align: center;
   --fontsize: 25px;
   margin-right: 0px;
-  background-color: #567;
+  background-color: #345;
   }
   #container img{
     filter: opacity(50%);
@@ -47,13 +47,14 @@ html{
     padding: 1rem;
     margin: 2rem;
     border-radius: 20%;
-
+    transition-duration: 500ms;
   }
   #colum:hover{
-    background-color: #345;
+    background-color: #678;
     transform: scale(1.1);
     border: 1px solid darkorchid;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 1.2);
+    
   } 
   #container a{
     display: block;
@@ -114,7 +115,7 @@ html{
     font-size: large;
   }
   .main{
-    background-color: #567;
+    background-color: #345;
   }
   
   .intro{
@@ -270,9 +271,12 @@ html{
       display: block;
       text-align: center;
     }
-    #colum{
+    #container{
+      display: block;
+      text-align: center;
       width: 90%;
     }
+    
     #grid{
       width: 100%;
       text-align: center;
